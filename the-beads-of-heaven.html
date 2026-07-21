@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Beads of Heaven — Handcrafted Kanthi & Mala</title>
+<meta name="description" content="The Beads of Heaven manufactures handcrafted kanthi and japa mala — tulsi, rudraksha and sandalwood beads strung the traditional way, for devotees, temples and retailers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2A1210;
+    --maroon:#5C1B1B;
+    --maroon-deep:#3B1010;
+    --gold:#B8862E;
+    --gold-light:#D9B064;
+    --tulsi:#4B6043;
+    --parchment:#F7EFDD;
+    --parchment-dark:#EDE0C0;
+    --cream:#F4EAD2;
+    --line: rgba(42,18,16,0.14);
+    --shadow: 0 10px 30px rgba(42,18,16,0.12);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--parchment);
+    color:var(--ink);
+    font-family:'Jost', sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Marcellus', serif;
+    font-weight:400;
+    margin:0;
+    letter-spacing:0.01em;
+  }
+  .script{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+  }
+  p{margin:0;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .eyebrow{
+    font-family:'Jost', sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:500;
+  }
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+  section{padding:110px 0;}
+  @media(max-width:720px){
+    section{padding:70px 0;}
+    .wrap{padding:0 22px;}
+  }
+
+  /* focus visibility */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+
+  /* ============ NAV ============ */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(247,239,221,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 32px;
+    max-width:1180px; margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Marcellus', serif;
+    font-size:1.15rem;
+    letter-spacing:0.03em;
+  }
+  .brand .mark{
+    width:37px; height:36px; border-radius:50%;
+    /* background:radial-gradient(circle at 32% 28%, var(--gold-light), var(--gold) 55%, #8a611e 100%);
+    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.25); */
+    flex:none;
+  }
+  nav.links{
+    display:flex; gap:34px;
+    font-size:0.86rem;
+    letter-spacing:0.03em;
+  }
+  nav.links a{
+    position:relative;
+    padding-bottom:4px;
+    color:var(--ink);
+    opacity:0.8;
+  }
+  nav.links a:hover{opacity:1;}
+  nav.links a::after{
+    content:"";
+    position:absolute; left:0; bottom:0;
+    width:0%; height:1px; background:var(--gold);
+    transition:width 0.25s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  .nav-cta{
+    border:1px solid var(--maroon);
+    color:var(--maroon);
+    padding:9px 20px;
+    border-radius:2px;
+    font-size:0.82rem;
+    letter-spacing:0.04em;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--maroon); color:var(--cream);}
+  .menu-btn{display:none; background:none; border:none; font-size:1.4rem; color:var(--ink); cursor:pointer;}
+  @media(max-width:860px){
+    nav.links{display:none;}
+    .nav-cta{display:none;}
+    .menu-btn{display:block;}
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    padding-top:70px;
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse at 80% -10%, rgba(184,134,46,0.14), transparent 55%),
+      var(--parchment);
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:40px;
+    align-items:center;
+    min-height:70vh;
+  }
+  @media(max-width:900px){
+    .hero-inner{grid-template-columns:1fr; min-height:auto;}
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 5.4vw, 4.4rem);
+    line-height:1.04;
+    color:var(--maroon-deep);
+  }
+  .hero .lede{
+    margin-top:22px;
+    font-size:1.12rem;
+    max-width:480px;
+    color:#4a2c28;
+  }
+  .hero-ctas{
+    margin-top:34px;
+    display:flex; gap:16px; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:2px;
+    font-size:0.88rem;
+    letter-spacing:0.04em;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+  .btn-primary{
+    background:var(--maroon);
+    color:var(--cream);
+  }
+  .btn-primary:hover{background:var(--maroon-deep); transform:translateY(-1px);}
+  .btn-ghost{
+    border-color:var(--ink);
+    color:var(--ink);
+  }
+  .btn-ghost:hover{border-color:var(--gold); color:var(--gold);}
+
+  /* draped mala visual */
+  .mala-visual{
+    position:relative;
+    height:420px;
+  }
+  .mala-visual svg{width:100%; height:100%;}
+  .bead{
+    filter:drop-shadow(0 3px 4px rgba(42,18,16,0.35));
+  }
+  .guru-bead{
+    filter:drop-shadow(0 4px 6px rgba(42,18,16,0.45));
+  }
+
+  /* ============ JAPA COUNTER STRIP ============ */
+  .counter-strip{
+    background:var(--maroon-deep);
+    color:var(--cream);
+    padding:64px 0;
+  }
+  .counter-inner{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:40px;
+    align-items:center;
+  }
+  @media(max-width:760px){
+    .counter-inner{grid-template-columns:1fr; text-align:center;}
+  }
+  .counter-inner h2{font-size:1.6rem; color:var(--cream);}
+  .counter-inner .script{color:var(--gold-light); font-size:1.15rem; display:block; margin-top:8px;}
+  .counter-widget{
+    display:flex; flex-direction:column; align-items:center; gap:14px;
+    background:rgba(244,234,210,0.05);
+    border:1px solid rgba(217,176,100,0.35);
+    padding:26px 34px;
+    border-radius:6px;
+    min-width:240px;
+  }
+  #japaBead{
+    width:74px; height:74px; border-radius:50%;
+    background:radial-gradient(circle at 32% 28%, var(--gold-light), var(--gold) 55%, #7a5620 100%);
+    border:none; cursor:pointer;
+    box-shadow:0 6px 14px rgba(0,0,0,0.4);
+    transition:transform 0.12s ease;
+  }
+  #japaBead:active{transform:scale(0.9);}
+  .counter-readout{
+    font-family:'Marcellus', serif;
+    font-size:1rem;
+    letter-spacing:0.04em;
+  }
+  .counter-readout span{color:var(--gold-light); font-size:1.3rem;}
+  .counter-reset{
+    font-size:0.75rem;
+    letter-spacing:0.06em;
+    color:rgba(244,234,210,0.6);
+    background:none; border:none; cursor:pointer;
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+  .counter-reset:hover{color:var(--gold-light);}
+  .counter-hint{font-size:0.78rem; color:rgba(244,234,210,0.55); max-width:180px; text-align:center;}
+
+  /* ============ SECTION HEADERS ============ */
+  .section-head{
+    max-width:620px;
+    margin-bottom:56px;
+  }
+  .section-head h2{
+    font-size:clamp(1.9rem, 3vw, 2.5rem);
+    margin-top:10px;
+    color:var(--maroon-deep);
+  }
+  .section-head p{
+    margin-top:16px;
+    color:#5a3c36;
+    font-size:1.02rem;
+  }
+  .center{text-align:center; margin-left:auto; margin-right:auto;}
+
+  /* ============ ABOUT ============ */
+  .about-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:64px;
+    align-items:center;
+  }
+  @media(max-width:860px){ .about-grid{grid-template-columns:1fr;} }
+  .about-pattern{
+    aspect-ratio:1/1;
+    border-radius:6px;
+    background:var(--parchment-dark);
+    position:relative;
+    overflow:hidden;
+    display:grid;
+    place-items:center;
+  }
+  .about-pattern svg{width:82%; height:82%;}
+  .about-text p{margin-bottom:18px; color:#4a2c28;}
+  .about-text p:last-child{margin-bottom:0;}
+  .about-stats{
+    display:flex; gap:40px;
+    margin-top:36px;
+    flex-wrap:wrap;
+  }
+  .stat b{
+    display:block;
+    font-family:'Marcellus', serif;
+    font-size:1.9rem;
+    color:var(--maroon);
+  }
+  .stat span{font-size:0.78rem; letter-spacing:0.05em; color:#6b4c44; text-transform:uppercase;}
+
+  /* ============ PRODUCTS ============ */
+  .products-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+  }
+  @media(max-width:820px){ .products-grid{grid-template-columns:1fr;} }
+  .product-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    display:flex; flex-direction:column;
+    transition:box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .product-card:hover{box-shadow:var(--shadow); transform:translateY(-3px);}
+  .product-visual{
+    height:260px;
+    display:grid; place-items:center;
+    background:linear-gradient(160deg, var(--parchment-dark), var(--cream));
+    border-bottom:1px solid var(--line);
+  }
+  .product-visual svg{height:75%;}
+  .product-body{padding:30px 32px 34px;}
+  .product-body .eyebrow{color:var(--tulsi);}
+  .product-body h3{font-size:1.5rem; margin-top:8px; color:var(--maroon-deep);}
+  .product-body p{margin-top:14px; color:#4a2c28; font-size:0.97rem;}
+  .spec-list{
+    list-style:none; padding:0; margin:20px 0 0;
+    display:grid; gap:8px;
+  }
+  .spec-list li{
+    font-size:0.86rem;
+    color:#5a3c36;
+    padding-left:18px;
+    position:relative;
+  }
+  .spec-list li::before{
+    content:"";
+    position:absolute; left:0; top:9px;
+    width:6px; height:6px; border-radius:50%;
+    background:var(--gold);
+  }
+
+  /* ============ PHOTO SLOTS ============ */
+  .photo-slot{
+    width:100%; height:100%;
+    position:relative;
+    background:linear-gradient(160deg, var(--parchment-dark), var(--cream));
+    padding:10px;
+    box-sizing:border-box;
+  }
+  .photo-slot img{
+    width:100%; height:100%;
+    object-fit:contain;
+    object-position:center;
+    display:block;
+  }
+  .photo-fallback{
+    display:none;
+    position:absolute; inset:0;
+    flex-direction:column; align-items:center; justify-content:center;
+    gap:8px;
+    color:#9c8177;
+    text-align:center;
+    padding:12px;
+  }
+  .photo-fallback svg{width:30px; height:30px; opacity:0.55;}
+  .photo-fallback span{font-size:0.72rem; letter-spacing:0.02em; max-width:180px;}
+
+  /* ============ SHOP ============ */
+  .shop-tabs{
+    display:flex; gap:10px; margin-bottom:40px; flex-wrap:wrap;
+  }
+  .shop-tab{
+    padding:10px 20px;
+    border:1px solid var(--maroon);
+    border-radius:20px;
+    font-size:0.82rem;
+    letter-spacing:0.03em;
+    color:var(--maroon);
+    background:none;
+    cursor:pointer;
+    transition:background 0.2s ease, color 0.2s ease;
+  }
+  .shop-tab.active, .shop-tab:hover{
+    background:var(--maroon);
+    color:var(--cream);
+  }
+  .shop-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
+  @media(max-width:900px){ .shop-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:600px){ .shop-grid{grid-template-columns:1fr;} }
+  .shop-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    display:flex; flex-direction:column;
+    transition:box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .shop-card:hover{box-shadow:var(--shadow); transform:translateY(-3px);}
+  .shop-visual{
+    height:210px;
+    display:grid; place-items:center;
+    background:linear-gradient(160deg, var(--parchment-dark), var(--cream));
+    border-bottom:1px solid var(--line);
+  }
+  .shop-visual svg{height:70%;}
+  .shop-body{padding:22px 24px 26px; display:flex; flex-direction:column; flex:1;}
+  .shop-body .eyebrow{color:var(--tulsi); font-size:0.66rem;}
+  .shop-body h3{font-size:1.12rem; margin-top:6px; color:var(--maroon-deep);}
+  .shop-body p{margin-top:10px; font-size:0.86rem; color:#5a3c36; flex:1;}
+  .shop-price-row{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-top:16px;
+  }
+  .shop-price{font-family:'Marcellus', serif; font-size:1.2rem; color:var(--maroon);}
+  .shop-price .old{
+    font-family:'Jost', sans-serif;
+    font-size:0.78rem;
+    color:#9c8177;
+    text-decoration:line-through;
+    margin-left:6px;
+  }
+  .rzp-wrap form{margin:0;}
+  .buy-btn{
+    display:inline-block;
+    margin-top:14px;
+    width:100%;
+    text-align:center;
+    padding:12px 0;
+    background:var(--maroon);
+    color:var(--cream);
+    border:none;
+    border-radius:3px;
+    font-family:'Jost', sans-serif;
+    font-size:0.85rem;
+    letter-spacing:0.03em;
+    cursor:pointer;
+  }
+  .buy-btn:hover{background:var(--maroon-deep);}
+  .shop-note{
+    margin-top:44px;
+    padding:20px 24px;
+    background:var(--cream);
+    border:1px dashed var(--gold);
+    border-radius:6px;
+    font-size:0.86rem;
+    color:#5a3c36;
+    max-width:720px;
+  }
+  .shop-note b{color:var(--maroon);}
+
+  /* ============ PROCESS ============ */
+  .process-strip{background:var(--parchment-dark);}
+  .process-grid{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:0;
+    position:relative;
+  }
+  @media(max-width:900px){
+    .process-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .process-grid{grid-template-columns:1fr;}
+  }
+  .process-step{
+    padding:0 22px;
+    border-left:1px solid var(--line);
+    position:relative;
+  }
+  .process-grid > .process-step:first-child{border-left:none;}
+  @media(max-width:900px){
+    .process-step:nth-child(odd){border-left:none;}
+  }
+  .process-step .num{
+    font-family:'Marcellus', serif;
+    font-size:0.95rem;
+    color:var(--gold);
+    letter-spacing:0.05em;
+  }
+  .process-step h3{
+    font-size:1.08rem;
+    margin-top:14px;
+    color:var(--maroon-deep);
+  }
+  .process-step p{
+    margin-top:10px;
+    font-size:0.88rem;
+    color:#5a3c36;
+  }
+
+  /* ============ VALUES ============ */
+  .values-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:28px;
+  }
+  @media(max-width:900px){ .values-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:520px){ .values-grid{grid-template-columns:1fr;} }
+  .value-card{
+    padding:30px 26px;
+    background:var(--cream);
+    border-radius:6px;
+    border:1px solid var(--line);
+  }
+  .value-card .icon{
+    width:38px; height:38px;
+    border-radius:50%;
+    background:radial-gradient(circle at 32% 28%, var(--gold-light), var(--gold));
+    margin-bottom:18px;
+  }
+  .value-card h3{font-size:1.05rem; color:var(--maroon-deep);}
+  .value-card p{margin-top:10px; font-size:0.88rem; color:#5a3c36;}
+
+  /* ============ WHOLESALE BANNER ============ */
+  .wholesale{
+    background:var(--maroon);
+    color:var(--cream);
+    text-align:center;
+  }
+  .wholesale h2{color:var(--cream); font-size:clamp(1.8rem,3vw,2.4rem);}
+  .wholesale p{
+    max-width:600px; margin:20px auto 0;
+    color:rgba(244,234,210,0.85);
+  }
+  .wholesale .btn-primary{
+    margin-top:32px;
+    background:var(--gold);
+    color:var(--maroon-deep);
+  }
+  .wholesale .btn-primary:hover{background:var(--gold-light);}
+
+  /* ============ CONTACT ============ */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:60px;
+  }
+  @media(max-width:860px){ .contact-grid{grid-template-columns:1fr;} }
+  .contact-info h3{font-size:1.2rem; color:var(--maroon-deep); margin-bottom:16px;}
+  .contact-info .row{
+    display:flex; gap:14px; margin-bottom:18px; font-size:0.94rem; color:#4a2c28;
+  }
+  .contact-info .row b{color:var(--maroon); min-width:78px; font-weight:500;}
+  form{display:grid; gap:18px;}
+  .field{display:grid; gap:8px;}
+  .field label{font-size:0.78rem; letter-spacing:0.05em; text-transform:uppercase; color:#6b4c44;}
+  .field input, .field textarea, .field select{
+    border:1px solid var(--line);
+    background:var(--cream);
+    padding:13px 14px;
+    font-family:'Jost', sans-serif;
+    font-size:0.95rem;
+    color:var(--ink);
+    border-radius:3px;
+  }
+  .field textarea{resize:vertical; min-height:110px;}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  @media(max-width:520px){ .field-row{grid-template-columns:1fr;} }
+  form .btn-primary{border:none; font-size:0.9rem; justify-self:start; margin-top:6px;}
+
+  /* ============ FOOTER ============ */
+  footer{
+    background:var(--maroon-deep);
+    color:rgba(244,234,210,0.75);
+    padding:56px 0 30px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:36px;
+    border-bottom:1px solid rgba(244,234,210,0.15);
+  }
+  @media(max-width:700px){ .footer-grid{grid-template-columns:1fr;} }
+  .footer-brand{display:flex; align-items:center; gap:10px; font-family:'Marcellus', serif; color:var(--cream); font-size:1.1rem;}
+  .footer-brand .mark{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 32% 28%, var(--gold-light), var(--gold));}
+  .footer-grid p{margin-top:14px; font-size:0.86rem; max-width:280px;}
+  .footer-col h4{font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold-light); margin-bottom:16px; font-weight:500;}
+  .footer-col a{display:block; font-size:0.88rem; margin-bottom:10px; opacity:0.85;}
+  .footer-col a:hover{opacity:1; color:var(--gold-light);}
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    padding-top:24px; font-size:0.78rem; flex-wrap:wrap; gap:10px;
+  }
+
+  /* reveal on scroll */
+  .reveal{
+    opacity:0; transform:translateY(18px);
+    transition:opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1; transform:none; transition:none;}
+    #japaBead{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><span class="mark"><img src="images/logo.png" alt="logo"></span>The Beads of Heaven</div>
+    <nav class="links">
+      <a href="#craft">Our Craft</a>
+      <a href="#products">Kanthi &amp; Mala</a>
+      <a href="#shop">Shop</a>
+      <a href="#process">Process</a>
+      <a href="#wholesale">Wholesale</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#shop" class="nav-cta">Shop Now</a>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow">Manufacturers of Kanthi &amp; Japa Mala</p>
+      <h1>The Beads<br>of Heaven</h1>
+      <p class="lede">Every strand is cut, shaped and knotted by hand from tulsi, rudraksha and sandalwood — made to be worn in devotion and counted in prayer.</p>
+      <div class="hero-ctas">
+        <a href="#shop" class="btn btn-primary">Shop the collection</a>
+        <a href="#wholesale" class="btn btn-ghost">Bulk &amp; wholesale orders</a>
+      </div>
+    </div>
+    <div class="mala-visual reveal" id="malaVisual" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ JAPA COUNTER (signature interactive) ============ -->
+<section class="counter-strip">
+  <div class="wrap counter-inner">
+    <div>
+      <h2>A mala is counted, not just worn.</h2>
+      <span class="script">Try one round for yourself — 108 beads, one bead at a time.</span>
+    </div>
+    <div class="counter-widget">
+      <button id="japaBead" aria-label="Count a bead"></button>
+      <p class="counter-readout">Bead <span id="japaCount">0</span> / 108</p>
+      <p class="counter-hint" id="japaHint">Tap the bead for every count, the way a mala is turned in the hand.</p>
+      <button class="counter-reset" id="japaReset">Reset the strand</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / CRAFT ============ -->
+<section id="craft">
+  <div class="wrap about-grid">
+    <div class="about-pattern reveal">
+      <svg viewBox="0 0 200 200" fill="none">
+        <g id="patternBeads"></g>
+      </svg>
+    </div>
+    <div class="about-text reveal">
+      <p class="eyebrow">Our Craft</p>
+      <h2 style="margin-top:10px; font-size:clamp(1.9rem,3vw,2.5rem); color:var(--maroon-deep);">Made the way a mala has always been made</h2>
+      <p style="margin-top:22px;">The Beads of Heaven manufactures kanthi and japa mala for devotees, temples, ashrams and retailers. A kanthi is worn at the neck as a mark of surrender and protection; a mala of 108 beads is held in the hand and turned once for every name repeated in prayer. Both have been made the same way for generations, and we haven't changed that.</p>
+      <p>Our workshop selects wood by hand, rounds and sizes every bead to match its neighbours, and strings each strand with a traditional knot between beads, so that no bead can slip, chip, or fall out of count.</p>
+      <div class="about-stats">
+        <div class="stat"><b>100%</b><span>Hand-strung</span></div>
+        <div class="stat"><b>108</b><span>Beads per mala</span></div>
+        <div class="stat"><b>3</b><span>Woods used</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section id="products" style="background:var(--parchment-dark);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">What We Make</p>
+      <h2>Kanthi &amp; Mala</h2>
+      <p>Two forms of the same devotion — one worn around the neck, one turned in the hand.</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card reveal">
+        <div class="product-visual">
+          <div class="photo-slot">
+            <img src="images/kanthi-hero.jpg" alt="Tulsi kanthi neck beads" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+              <span>Add photo: images/kanthi-hero.jpg</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-body">
+          <p class="eyebrow">Neck Beads</p>
+          <h3>Kanthi</h3>
+          <p>Single or double-strand tulsi kanthi, made in the traditional round-bead style worn daily as a mark of devotion. Sized for a close, comfortable fit and finished with a secure hand knot.</p>
+          <ul class="spec-list">
+            <li>Tulsi wood, single, double or triple strand</li>
+            <li>Bead sizes from 3mm to 8mm</li>
+            <li>Adjustable or fixed-length cord</li>
+            <li>Made to order in bulk quantities</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-visual">
+          <div class="photo-slot">
+            <img src="images/mala-hero.jpg" alt="Japa mala prayer beads" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+              <span>Add photo: images/mala-hero.jpg</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-body">
+          <p class="eyebrow">Japa Rosary</p>
+          <h3>Mala</h3>
+          <p>108-bead japa mala in tulsi, rudraksha or sandalwood, with a guru bead and tassel finished by hand. Every bead is matched for size so the count in the hand never falls short.</p>
+          <ul class="spec-list">
+            <li>Tulsi, rudraksha or sandalwood</li>
+            <li>108 + 1 guru bead, traditional count</li>
+            <li>Hand-knotted between each bead</li>
+            <li>Custom tassel colours available</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOP ============ -->
+<section id="shop">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Shop Online</p>
+      <h2>Buy directly, pay securely</h2>
+      <p>Order online and pay by UPI, card or netbanking. Every piece ships from our workshop, counted and checked before it leaves.</p>
+    </div>
+
+    <div class="shop-tabs reveal">
+      <button class="shop-tab active" data-filter="all">All</button>
+      <button class="shop-tab" data-filter="kanthi">Kanthi</button>
+      <button class="shop-tab" data-filter="mala">Mala</button>
+      <button class="shop-tab" data-filter="bracelet">Bracelets</button>
+    </div>
+
+    <div class="shop-grid" id="shopGrid">
+
+      <div class="shop-card reveal" data-cat="kanthi">
+        <div class="shop-visual"><div class="photo-slot"><img src="images/kanthi-single.jpeg" alt="Tulsi Kanthi Single Strand" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="photo-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><span>Add photo: images/kanthi-single.jpg</span></div></div></div>
+        <div class="shop-body">
+          <p class="eyebrow">Kanthi</p>
+          <h3>Tulsi Kanthi — Single Strand</h3>
+          <p>Everyday wear, close-fit single strand, hand-knotted.</p>
+          <div class="shop-price-row"><span class="shop-price">₹249</span></div>
+          <a class="buy-btn" href="https://wa.me/918401193622?text=Hi%21%20I%27d%20like%20to%20order%20the%20Tulsi%20Kanthi%20%E2%80%94%20Single%20Strand%20%28%E2%82%B9249%29%20from%20The%20Beads%20of%20Heaven." target="_blank" rel="noopener">Buy on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="shop-card reveal" data-cat="kanthi">
+        <div class="shop-visual"><div class="photo-slot"><img src="images/kanthi-double.jpg" alt="Tulsi Kanthi Double Strand" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="photo-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><span>Add photo: images/kanthi-double.jpg</span></div></div></div>
+        <div class="shop-body">
+          <p class="eyebrow">Kanthi</p>
+          <h3>Tulsi Kanthi — Double Strand</h3>
+          <p>Fuller double strand, worn together for daily devotion.</p>
+          <div class="shop-price-row"><span class="shop-price">₹399</span></div>
+          <a class="buy-btn" href="https://wa.me/918401193622?text=Hi%21%20I%27d%20like%20to%20order%20the%20Tulsi%20Kanthi%20%E2%80%94%20Double%20Strand%20%28%E2%82%B9399%29%20from%20The%20Beads%20of%20Heaven." target="_blank" rel="noopener">Buy on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="shop-card reveal" data-cat="mala">
+        <div class="shop-visual"><div class="photo-slot"><img src="images/mala-tulsi.png" alt="Tulsi Japa Mala 108 Beads" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="photo-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><span>Add photo: images/mala-tulsi.jpg</span></div></div></div>
+        <div class="shop-body">
+          <p class="eyebrow">Mala</p>
+          <h3>Tulsi Japa Mala — 108 Beads</h3>
+          <p>Classic tulsi mala with guru bead and tassel, for daily japa.</p>
+          <div class="shop-price-row"><span class="shop-price">₹349</span></div>
+          <a class="buy-btn" href="https://wa.me/918401193622?text=Hi%21%20I%27d%20like%20to%20order%20the%20Tulsi%20Japa%20Mala%20%E2%80%94%20108%20Beads%20%28%E2%82%B9349%29%20from%20The%20Beads%20of%20Heaven." target="_blank" rel="noopener">Buy on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="shop-card reveal" data-cat="mala">
+        <div class="shop-visual"><div class="photo-slot"><img src="images/mala-sandalwood.jpeg" alt="Sandalwood Japa Mala 108 Beads" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="photo-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><span>Add photo: images/mala-sandalwood.jpg</span></div></div></div>
+        <div class="shop-body">
+          <p class="eyebrow">Mala</p>
+          <h3>Sandalwood Japa Mala — 108 Beads</h3>
+          <p>Fragrant sandalwood beads, hand-rounded and matched.</p>
+          <div class="shop-price-row"><span class="shop-price">₹699</span></div>
+          <a class="buy-btn" href="https://wa.me/918401193622?text=Hi%21%20I%27d%20like%20to%20order%20the%20Sandalwood%20Japa%20Mala%20%E2%80%94%20108%20Beads%20%28%E2%82%B9699%29%20from%20The%20Beads%20of%20Heaven." target="_blank" rel="noopener">Buy on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="shop-card reveal" data-cat="bracelet">
+        <div class="shop-visual"><div class="photo-slot"><img src="images/bracelet-tulsi.jpeg" alt="Tulsi Bracelet" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="photo-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><span>Add photo: images/bracelet-tulsi.jpg</span></div></div></div>
+        <div class="shop-body">
+          <p class="eyebrow">Bracelet</p>
+          <h3>Tulsi Bracelet</h3>
+          <p>Elasticated tulsi bead bracelet, hand-rounded and matched for size.</p>
+          <div class="shop-price-row"><span class="shop-price">₹199</span></div>
+          <a class="buy-btn" href="https://wa.me/918401193622?text=Hi%21%20I%27d%20like%20to%20order%20the%20Tulsi%20Bracelet%20%28%E2%82%B9199%29%20from%20The%20Beads%20of%20Heaven." target="_blank" rel="noopener">Buy on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="shop-card reveal" data-cat="bracelet">
+        <div class="shop-visual"><div class="photo-slot"><img src="images/bracelet-sandalwood.jpg" alt="Sandalwood Bracelet" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="photo-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><span>Add photo: images/bracelet-sandalwood.jpg</span></div></div></div>
+        <div class="shop-body">
+          <p class="eyebrow">Bracelet</p>
+          <h3>Sandalwood Bracelet</h3>
+          <p>Fragrant sandalwood beads strung on a comfortable stretch cord.</p>
+          <div class="shop-price-row"><span class="shop-price">₹249</span></div>
+          <a class="buy-btn" href="https://wa.me/918401193622?text=Hi%21%20I%27d%20like%20to%20order%20the%20Sandalwood%20Bracelet%20%28%E2%82%B9249%29%20from%20The%20Beads%20of%20Heaven." target="_blank" rel="noopener">Buy on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="shop-card reveal" data-cat="bracelet">
+        <div class="shop-visual"><div class="photo-slot"><img src="images/bracelet-red-sandalwood.jpg" alt="Red Sandalwood Bracelet" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="photo-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><span>Add photo: images/bracelet-red-sandalwood.jpg</span></div></div></div>
+        <div class="shop-body">
+          <p class="eyebrow">Bracelet</p>
+          <h3>Red Sandalwood Bracelet</h3>
+          <p>Deep-toned red sandalwood beads, rounded smooth on a sturdy stretch cord.</p>
+          <div class="shop-price-row"><span class="shop-price">₹279</span></div>
+          <a class="buy-btn" href="https://wa.me/918401193622?text=Hi%21%20I%27d%20like%20to%20order%20the%20Red%20Sandalwood%20Bracelet%20%28%E2%82%B9279%29%20from%20The%20Beads%20of%20Heaven." target="_blank" rel="noopener">Buy on WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="shop-note reveal">
+      <b>How ordering works:</b> tapping "Buy on WhatsApp" opens a chat with us on WhatsApp with the product and price already filled in — just hit send and we'll confirm your order and payment details there.
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process" class="process-strip">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">How It's Made</p>
+      <h2>From wood to worn</h2>
+      <p>Five stages, every one of them by hand.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <p class="num">01</p>
+        <h3>Sourcing</h3>
+        <p>Tulsi stems, rudraksha seeds and sandalwood are selected for grain, density and age.</p>
+      </div>
+      <div class="process-step reveal">
+        <p class="num">02</p>
+        <h3>Shaping</h3>
+        <p>Wood is cut and rounded into beads, then sorted so each strand is even in size.</p>
+      </div>
+      <div class="process-step reveal">
+        <p class="num">03</p>
+        <h3>Polishing</h3>
+        <p>Beads are smoothed and given a natural finish, without paint or artificial colour.</p>
+      </div>
+      <div class="process-step reveal">
+        <p class="num">04</p>
+        <h3>Stringing</h3>
+        <p>Each bead is knotted individually onto the cord, in the traditional counting order.</p>
+      </div>
+      <div class="process-step reveal">
+        <p class="num">05</p>
+        <h3>Final Check</h3>
+        <p>Every strand is counted, tested for strength, and inspected before it leaves the workshop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VALUES ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Why Workshops &amp; Retailers Choose Us</p>
+      <h2>Consistency you can count on</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="icon"></div>
+        <h3>Matched sizing</h3>
+        <p>Every bead in a strand is sorted to size, so a mala counts true, round after round.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="icon"></div>
+        <h3>Natural materials</h3>
+        <p>No dye, no synthetic coating — only tulsi, rudraksha and sandalwood, finished plain.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="icon"></div>
+        <h3>Secure knotting</h3>
+        <p>A hand knot between every bead means nothing slips loose, even with daily wear.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="icon"></div>
+        <h3>Order at scale</h3>
+        <p>From a single mala to a temple or retailer's full order, made to the same standard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHOLESALE ============ -->
+<section id="wholesale" class="wholesale">
+  <div class="wrap reveal">
+    <p class="eyebrow" style="color:var(--gold-light);">For Temples, Ashrams &amp; Retailers</p>
+    <h2 style="margin-top:10px;">Bulk and wholesale orders</h2>
+    <p>We supply kanthi and mala in bulk to temples, ashrams, spiritual retailers and exporters, with consistent sizing and finish across every order, large or small.</p>
+    <a href="#contact" class="btn btn-primary">Request a wholesale quote</a>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <p class="eyebrow">Get in Touch</p>
+      <h2 style="margin-top:10px; font-size:clamp(1.9rem,3vw,2.3rem); color:var(--maroon-deep); margin-bottom:26px;">Speak with the workshop</h2>
+      <div class="row"><b>Phone</b><span>+91 84011 93622</span></div>
+      <div class="row"><b>WhatsApp</b><span><a href="https://wa.me/918401193622" target="_blank" rel="noopener">+91 84011 93622</a></span></div>
+      <div class="row"><b>Email</b><span><a href="mailto:support@example.com?subject=Inquiry">vijaymechanicalworks0@gmail.com</a></span></div>
+      <div class="row"><b>Workshop</b><span>Teen darvaja Jain derasar Samay, Khambhat, Gujarat 388620</span></div>
+    </div>
+    <form class="reveal" id="contactForm">
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" type="tel" placeholder="Your phone number">
+        </div>
+      </div>
+      <div class="field">
+        <label for="interest">I'm enquiring about</label>
+        <select id="interest">
+          <option>Kanthi</option>
+          <option>Japa Mala</option>
+          <option>Wholesale / bulk order</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Tell us what you're looking for — quantity, material, size"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send enquiry</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="mark"></span>The Beads of Heaven</div>
+        <p>Handcrafted kanthi and japa mala, made the traditional way for devotees, temples and retailers.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#craft">Our Craft</a>
+        <a href="#products">Kanthi &amp; Mala</a>
+        <a href="#shop">Shop</a>
+        <a href="#process">Process</a>
+        <a href="#wholesale">Wholesale</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="#contact">Enquire</a>
+        <a href="#contact">Wholesale quote</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 The Beads of Heaven. All rights reserved.</span>
+      <span>Handmade, strand by strand.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- generate a draped mala for the hero ----
+  (function(){
+    const container = document.getElementById('malaVisual');
+    const w = 480, h = 420;
+    const n = 27;
+    let svg = `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid meet">`;
+    const cx = w/2, topY = 30, sag = 320;
+    let path = "";
+    const pts = [];
+    for(let i=0;i<n;i++){
+      const t = i/(n-1);
+      const x = 60 + t*(w-120);
+      const theta = t*Math.PI;
+      const y = topY + Math.sin(theta) * (sag/Math.PI) * 1.15;
+      pts.push([x,y]);
+    }
+    // thread
+    let d = `M ${pts[0][0]} ${pts[0][1]}`;
+    for(let i=1;i<pts.length;i++){ d += ` L ${pts[i][0]} ${pts[i][1]}`; }
+    svg += `<path d="${d}" stroke="#8a611e" stroke-width="1.5" fill="none" opacity="0.4"/>`;
+    const colors = ['#B8862E','#5C1B1B','#4B6043'];
+    pts.forEach((p, i)=>{
+      const isGuru = i === Math.floor(n/2) && false;
+      const r = 12 + (i%3===0 ? 2 : 0);
+      const c = colors[i%3];
+      svg += `<circle class="bead" cx="${p[0]}" cy="${p[1]}" r="${r}" fill="${c}" opacity="0.92"/>`;
+      svg += `<circle cx="${p[0]-r*0.3}" cy="${p[1]-r*0.3}" r="${r*0.3}" fill="#fff" opacity="0.25"/>`;
+    });
+    // guru bead / tassel bottom center
+    const mid = pts[Math.floor(n/2)];
+    svg += `<circle class="guru-bead" cx="${mid[0]}" cy="${mid[1]+26}" r="16" fill="var(--gold)"/>`;
+    svg += `<line x1="${mid[0]}" y1="${mid[1]+42}" x2="${mid[0]}" y2="${mid[1]+80}" stroke="var(--gold)" stroke-width="2" opacity="0.6"/>`;
+    svg += `</svg>`;
+    container.innerHTML = svg;
+  })();
+
+  // ---- pattern beads (about section) ----
+  (function(){
+    const g = document.getElementById('patternBeads');
+    const colors = ['#5C1B1B','#B8862E','#4B6043'];
+    let s = "";
+    const rows = 6;
+    for(let r=0;r<rows;r++){
+      const y = 20 + r*32;
+      const count = r%2===0 ? 5 : 4;
+      const offset = r%2===0 ? 0 : 20;
+      for(let c=0;c<count;c++){
+        const x = 20 + offset + c*40;
+        if(x>190) continue;
+        s += `<circle cx="${x}" cy="${y}" r="9" fill="${colors[(r+c)%3]}" opacity="0.85"/>`;
+      }
+    }
+    g.innerHTML = s;
+  })();
+
+  // ---- product card bead rows ----
+  function beadRow(id, count, colors){
+    const g = document.getElementById(id);
+    if(!g) return;
+    let s = "";
+    const spacing = 200/(count-1);
+    for(let i=0;i<count;i++){
+      const x = 20 + i*spacing;
+      const y = 70 + Math.sin((i/(count-1))*Math.PI) * -35;
+      s += `<circle cx="${x}" cy="${y}" r="10" fill="${colors[i%colors.length]}"/>`;
+    }
+    g.innerHTML = s;
+  }
+
+  // ---- shop category filter ----
+  (function(){
+    const tabs = document.querySelectorAll('.shop-tab');
+    const cards = document.querySelectorAll('#shopGrid .shop-card');
+    tabs.forEach(tab=>{
+      tab.addEventListener('click', ()=>{
+        tabs.forEach(t=>t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        cards.forEach(card=>{
+          card.style.display = (filter==='all' || card.dataset.cat===filter) ? '' : 'none';
+        });
+      });
+    });
+  })();
+
+  // ---- japa counter ----
+  (function(){
+    const btn = document.getElementById('japaBead');
+    const countEl = document.getElementById('japaCount');
+    const hint = document.getElementById('japaHint');
+    const resetBtn = document.getElementById('japaReset');
+    let count = 0;
+    btn.addEventListener('click', ()=>{
+      count++;
+      if(count > 108) count = 1;
+      countEl.textContent = count;
+      if(count === 108){
+        hint.textContent = "One full mala. Well counted.";
+      } else {
+        hint.textContent = "Tap the bead for every count, the way a mala is turned in the hand.";
+      }
+    });
+    resetBtn.addEventListener('click', ()=>{
+      count = 0;
+      countEl.textContent = 0;
+      hint.textContent = "Tap the bead for every count, the way a mala is turned in the hand.";
+    });
+  })();
+
+  // ---- contact form (no backend, just confirmation) ----
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    const original = btn.textContent;
+    btn.textContent = "Enquiry noted — we'll reply soon";
+    btn.disabled = true;
+    setTimeout(()=>{ btn.textContent = original; btn.disabled = false; this.reset(); }, 2600);
+  });
+
+  // ---- scroll reveal ----
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
